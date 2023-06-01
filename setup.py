@@ -8,9 +8,11 @@ import os
 # Fetch the data using mnist
 test_images = mnist.test_images()
 test_labels = mnist.test_labels()
-# Normalize the images
+
+# Normalize the images (changes grayscale to form that the machine can understand)
 test_images = (test_images / 255) - 0.5
-# Flatten the images
+
+# Flatten the images (merges multiple lists into one list)
 test_images = test_images.reshape((-1, 784))
 
 # Build the model
@@ -20,7 +22,7 @@ model = Sequential([
     Dense(10, activation='softmax', ),
 ])
 
-# if model.h5 exist, use it, if not generate one
+# if model.h5 exist, test functionality, if not generate one
 if os.path.exists("model.h5") == False:
     # Train data and configuration
     train_images = mnist.train_images()
