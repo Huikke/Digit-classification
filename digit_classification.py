@@ -1,9 +1,6 @@
 import numpy as np
-import mnist
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.utils import to_categorical
-import os
 from image_to_vector import image_to_vector
 
 # Build the model
