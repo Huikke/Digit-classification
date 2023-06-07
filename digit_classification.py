@@ -17,10 +17,10 @@ model = Sequential([
 model.load_weights('model.h5')
 
 # Use function to change image to vector
-data = image_to_vector('digit.png')
+data = image_to_vector('digitRGB.png')
 
 # Get prediction from model
 prediction = model.predict(data)
 
 # Change it to readable result and print
-print(np.argmax(prediction, axis=1))
+print(np.argmax(prediction, axis=1)[0])
