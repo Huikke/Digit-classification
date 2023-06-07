@@ -17,7 +17,7 @@ model = Sequential([
 model.load_weights('model.h5')
 
 # Use function to change image to vector
-data = image_to_vector('digitRGB.png')
+data = image_to_vector('digit500x500.png')
 
 # Get prediction from model
 prediction = model.predict(data)
